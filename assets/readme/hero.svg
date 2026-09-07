@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="xVibePocketTTS — синтезированная русская речь на CPU. Диаграмма: волна 24 kHz, 90M параметров, 2.42x realtime на Ryzen 7 3700X." width="100%">
+  <title>xVibePocketTTS — русский TTS на CPU</title>
+  <desc>Hero-illustration: deterministic waveform of synthesized Russian speech with stress marks, surrounded by product metrics. Pure SVG, no animation, no remote fonts.</desc>
+
+  <defs>
+    <style>
+      .bg     { fill: #f7f4ec; }
+      .panel  { fill: #ffffff; stroke: #e2dccb; stroke-width: 1.5; }
+      .ink    { fill: #1a1a1a; font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace; }
+      .mute   { fill: #6a6356; font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace; }
+      .acc    { fill: #c6432a; font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace; font-weight: 700; }
+      .wave   { stroke: #1a1a1a; stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .axis   { stroke: #c7bfa8; stroke-width: 1; }
+      .chip   { fill: #f1ead7; stroke: #d8cfb4; stroke-width: 1; }
+      .pill   { fill: #1a1a1a; }
+      .pillT  { fill: #f7f4ec; font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace; font-weight: 700; }
+      .grid   { stroke: #ece5d0; stroke-width: 1; }
+      @media (prefers-color-scheme: dark) {
+        .bg     { fill: #0f1115; }
+        .panel  { fill: #161a22; stroke: #2a3140; }
+        .ink    { fill: #e8e6df; }
+        .mute   { fill: #9aa0ac; }
+        .acc    { fill: #ff7a59; }
+        .wave   { stroke: #e8e6df; }
+        .axis   { stroke: #3b4252; }
+        .chip   { fill: #1d2330; stroke: #2f3849; }
+        .pill   { fill: #e8e6df; }
+        .pillT  { fill: #0f1115; }
+        .grid   { stroke: #1f2530; }
+      }
+    </style>
+
+    <!-- A long deterministic waveform built from sin/cos harmonics -->
+    <symbol id="waveform" overflow="visible">
+      <path class="wave" d="
+        M 0 -8
+        C 4 -28, 8 -42, 14 -38
+        C 20 -32, 22 -10, 28 4
+        C 34 18, 40 32, 46 28
+        C 52 22, 56 4, 62 -10
+        C 68 -24, 74 -36, 80 -30
+        C 86 -22, 90 -6, 96 8
+        C 102 22, 108 30, 114 24
+        C 120 14, 126 -2, 132 -18
+        C 138 -32, 144 -40, 150 -34
+        C 156 -24, 162 -6, 168 10
+        C 174 24, 180 34, 186 28
+        C 192 18, 198 0, 204 -14
+        C 210 -28, 216 -38, 222 -32
+        C 228 -22, 234 -4, 240 12
+        C 246 28, 252 38, 258 30
+        C 264 18, 270 -2, 276 -20
+        C 282 -36, 288 -44, 294 -36
+        C 300 -22, 306 -2, 312 14
+        C 318 28, 324 36, 330 26
+        C 336 12, 342 -8, 348 -26
+        C 354 -42, 360 -48, 366 -38
+        C 372 -22, 378 -2, 384 14
+        C 390 28, 396 34, 402 22
+        C 408 8, 414 -10, 420 -28
+        C 426 -42, 432 -46, 438 -34
+        C 444 -16, 450 4, 456 22
+        C 462 36, 468 42, 474 32
+        C 480 14, 486 -8, 492 -28
+        C 498 -44, 504 -50, 510 -40
+        C 516 -22, 522 0, 528 20
+        C 534 36, 540 44, 546 36
+        C 552 22, 558 0, 564 -22
+        C 570 -42, 576 -54, 582 -44
+        C 588 -24, 594 0, 600 22
+        C 606 42, 612 56, 618 50
+        C 624 36, 630 14, 636 -10
+        C 642 -32, 648 -48, 654 -44
+        C 660 -28, 666 -4, 672 16
+        C 678 32, 684 42, 690 36
+        C 696 22, 702 0, 708 -22
+        C 714 -42, 720 -54, 726 -44
+        C 732 -22, 738 4, 744 28
+        C 750 46, 756 58, 762 50
+        C 768 30, 774 4, 780 -22
+        C 786 -46, 792 -58, 798 -48
+        C 804 -24, 810 4, 816 30
+        C 822 50, 828 60, 834 50
+        C 840 28, 846 0, 852 -28
+        C 858 -52, 864 -64, 870 -54
+        C 876 -26, 882 6, 888 36
+        C 894 58, 900 68, 906 56
+        C 912 30, 918 -2, 924 -34
+        C 930 -60, 936 -72, 942 -60
+        C 948 -32, 954 4, 960 38
+        C 966 64, 972 76, 978 64
+        C 984 36, 990 -2, 996 -38
+        C 1002 -68, 1008 -80, 1014 -66
+        C 1020 -34, 1026 6, 1032 42
+        C 1038 70, 1044 80, 1050 64
+        C 1056 32, 1062 -10, 1068 -50
+        C 1074 -82, 1080 -92, 1086 -72
+        C 1092 -36, 1098 8, 1104 50
+        C 1110 80, 1116 90, 1122 72
+      " />
+    </symbol>
+
+    <!-- Vertical stress-mark glyph used over the waveform -->
+    <symbol id="stressMark" overflow="visible">
+      <line x1="0" y1="-46" x2="0" y2="-12" stroke="#c6432a" stroke-width="2.4" stroke-linecap="round"/>
+      <polygon points="-5,-12 5,-12 0,-2" fill="#c6432a"/>
+    </symbol>
+  </defs>
+
+  <rect class="bg" width="1200" height="520"/>
+
+  <!-- Top frame: title + subtitle, kept inside the art so it is project-native, not a banner -->
+  <g transform="translate(60,72)">
+    <text class="mute" x="0" y="0" font-size="18">xvibe-pocket-tts · pocket-tts 3.0.2</text>
+    <text class="ink"   x="0" y="56" font-size="68" font-weight="800" letter-spacing="-1.5">xVibePocketTTS</text>
+    <text class="mute" x="0" y="98" font-size="22">синтез русской речи на CPU</text>
+  </g>
+
+  <!-- Terminal-style chip near the title: shows the actual first command -->
+  <g transform="translate(820,68)">
+    <rect class="chip" x="0" y="0" width="320" height="120" rx="14" ry="14"/>
+    <circle cx="20" cy="22" r="6" fill="#ff6b5b"/>
+    <circle cx="40" cy="22" r="6" fill="#ffcb47"/>
+    <circle cx="60" cy="22" r="6" fill="#7ed985"/>
+    <text class="mute" x="20"  y="58" font-size="16">$ uv run xvibe-tts serve</text>
+    <text class="ink"   x="20"  y="86" font-size="18">→ http://127.0.0.1:7860</text>
+    <text class="mute" x="20"  y="108" font-size="14">~458 MB загрузка при старте</text>
+  </g>
+
+  <!-- Main panel: waveform with grid -->
+  <g transform="translate(60,210)">
+    <rect class="panel" x="0" y="0" width="1080" height="260" rx="18" ry="18"/>
+
+    <!-- horizontal grid lines -->
+    <line class="grid" x1="40"  y1="60"  x2="1040" y2="60"/>
+    <line class="grid" x1="40"  y1="100" x2="1040" y2="100"/>
+    <line class="axis" x1="40"  y1="140" x2="1040" y2="140"/>
+    <line class="grid" x1="40"  y1="180" x2="1040" y2="180"/>
+    <line class="grid" x1="40"  y1="220" x2="1040" y2="220"/>
+
+    <!-- time markers -->
+    <text class="mute" x="40"   y="252" font-size="14">0.0s</text>
+    <text class="mute" x="540"  y="252" font-size="14" text-anchor="middle">0.5s</text>
+    <text class="mute" x="1040" y="252" font-size="14" text-anchor="end">1.0s</text>
+
+    <!-- waveform itself, scaled to fit the time grid -->
+    <g transform="translate(40,140)">
+      <use href="#waveform" transform="scale(1)"/>
+    </g>
+
+    <!-- stress marks anchored to specific syllables: Добрый вечер! -->
+    <g transform="translate(40,140)">
+      <use href="#stressMark" x="120" y="0"/>
+      <use href="#stressMark" x="430" y="0"/>
+      <use href="#stressMark" x="700" y="0"/>
+    </g>
+
+    <!-- syllable captions with manual '+' stress -->
+    <g transform="translate(40,80)">
+      <text class="ink" x="100" y="0" font-size="22">До<tspan class="acc">+</tspan>брый</text>
+      <text class="ink" x="400" y="0" font-size="22">ве<tspan class="acc">+</tspan>чер!</text>
+      <text class="mute" x="680" y="0" font-size="18">24 kHz mono</text>
+    </g>
+  </g>
+
+  <!-- Bottom stat strip -->
+  <g transform="translate(60,484)">
+    <g>
+      <rect class="pill" x="0"   y="0" width="160" height="28" rx="14" ry="14"/>
+      <text class="pillT" x="80" y="19" font-size="14" text-anchor="middle">~90M params</text>
+    </g>
+    <g transform="translate(180,0)">
+      <rect class="pill" x="0"   y="0" width="160" height="28" rx="14" ry="14"/>
+      <text class="pillT" x="80" y="19" font-size="14" text-anchor="middle">24 kHz mono</text>
+    </g>
+    <g transform="translate(360,0)">
+      <rect class="pill" x="0"   y="0" width="220" height="28" rx="14" ry="14"/>
+      <text class="pillT" x="110" y="19" font-size="14" text-anchor="middle">RTF 0.41 · Ryzen 7 3700X</text>
+    </g>
+    <g transform="translate(600,0)">
+      <rect class="pill" x="0"   y="0" width="200" height="28" rx="14" ry="14"/>
+      <text class="pillT" x="100" y="19" font-size="14" text-anchor="middle">RTF 0.14 · RTX 3090</text>
+    </g>
+    <g transform="translate(820,0)">
+      <rect class="pill" x="0"   y="0" width="200" height="28" rx="14" ry="14"/>
+      <text class="pillT" x="100" y="19" font-size="14" text-anchor="middle">3 пресета + клон</text>
+    </g>
+  </g>
+</svg>
