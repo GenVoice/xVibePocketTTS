@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" role="img" aria-label="Stress marks — ручные и автоматические ударения" width="100%">
+  <title>Stress marks</title>
+  <desc>Three ways to mark stress: manual '+', Unicode U+0301, and automatic via RUAccent.</desc>
+
+  <defs>
+    <style>
+      .bg     { fill: #f7f4ec; }
+      .card   { fill: #ffffff; stroke: #e2dccb; stroke-width: 1.5; }
+      .ink    { fill: #1a1a1a; font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace; }
+      .mute   { fill: #6a6356; font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace; }
+      .acc    { fill: #c6432a; font-weight: 700; font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace; }
+      .glyph  { fill: #1a1a1a; font-size: 56px; font-family: ui-serif, Georgia, "Times New Roman", serif; }
+      .glyphA { fill: #c6432a; font-size: 56px; font-family: ui-serif, Georgia, "Times New Roman", serif; font-weight: 700; }
+      .comb   { fill: #c6432a; font-size: 56px; font-family: ui-serif, Georgia, "Times New Roman", serif; font-weight: 700; }
+      .pill   { fill: #f1ead7; stroke: #d8cfb4; stroke-width: 1; }
+      @media (prefers-color-scheme: dark) {
+        .bg     { fill: #0f1115; }
+        .card   { fill: #161a22; stroke: #2a3140; }
+        .ink    { fill: #e8e6df; }
+        .mute   { fill: #9aa0ac; }
+        .acc    { fill: #ff7a59; }
+        .glyph  { fill: #e8e6df; }
+        .glyphA { fill: #ff7a59; }
+        .comb   { fill: #ff7a59; }
+        .pill   { fill: #1d2330; stroke: #2f3849; }
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="220"/>
+
+  <!-- Card 1: manual '+' -->
+  <g transform="translate(60,30)">
+    <rect class="card" width="340" height="160" rx="16" ry="16"/>
+    <text class="mute" x="24" y="34" font-size="18">РУЧНОЕ · 1</text>
+    <text class="ink"   x="24" y="68" font-size="18">«+» перед гласной</text>
+    <text x="24" y="120" class="glyph">з<tspan class="glyphA">+</tspan>амок</text>
+    <text x="24" y="148" class="mute" font-size="13">"замо́к" — закрытое место</text>
+    <rect class="pill" x="240" y="100" width="80" height="28" rx="14" ry="14"/>
+    <text class="ink"  x="280" y="119" font-size="13" text-anchor="middle">default</text>
+  </g>
+
+  <!-- Card 2: homograph via stress -->
+  <g transform="translate(430,30)">
+    <rect class="card" width="340" height="160" rx="16" ry="16"/>
+    <text class="mute" x="24" y="34" font-size="18">РУЧНОЕ · 2</text>
+    <text class="ink"   x="24" y="68" font-size="18">омографы</text>
+    <text x="24" y="120" class="glyph">зам<tspan class="glyphA">+</tspan>ок</text>
+    <text x="24" y="148" class="mute" font-size="13">"замо́к" — устройство</text>
+    <rect class="pill" x="240" y="100" width="80" height="28" rx="14" ry="14"/>
+    <text class="ink"  x="280" y="119" font-size="13" text-anchor="middle">тот-же текст</text>
+  </g>
+
+  <!-- Card 3: U+0301 combining acute -->
+  <g transform="translate(800,30)">
+    <rect class="card" width="340" height="160" rx="16" ry="16"/>
+    <text class="mute" x="24" y="34" font-size="18">UNICODE U+0301</text>
+    <text class="ink"   x="24" y="68" font-size="18">комбинируемая острота</text>
+    <text x="24" y="120" class="comb">за́мок</text>
+    <text x="24" y="148" class="mute" font-size="13">вместо «+» — диакритика</text>
+    <rect class="pill" x="240" y="100" width="80" height="28" rx="14" ry="14"/>
+    <text class="ink"  x="280" y="119" font-size="13" text-anchor="middle">опц.</text>
+  </g>
+</svg>
